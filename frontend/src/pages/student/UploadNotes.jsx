@@ -61,19 +61,19 @@ function UploadNotes() {
             <span>Upload Notes</span>
           </Link>
 
-          <Link to="/dashboard" className="nav-item">
+          <Link to="/my-bookmarks" className="nav-item">
             <Bookmark size={19} />
             <span>My Bookmarks</span>
           </Link>
 
-          <Link to="/dashboard" className="nav-item">
+          <Link to="/my-uploads" className="nav-item">
             <FolderOpen size={19} />
             <span>My Uploads</span>
           </Link>
 
           <p className="nav-label account-label">ACCOUNT</p>
 
-          <Link to="/dashboard" className="nav-item">
+          <Link to="/profile" className="nav-item">
             <User size={19} />
             <span>Profile</span>
           </Link>
@@ -113,11 +113,13 @@ function UploadNotes() {
             </div>
 
             <div className="form-grid">
+              {/* Note Title */}
               <div className="form-group">
                 <label>Note Title</label>
 
                 <div className="input-wrapper">
                   <FileText size={18} />
+
                   <input
                     type="text"
                     placeholder="e.g. Machine Learning Unit 1"
@@ -125,6 +127,7 @@ function UploadNotes() {
                 </div>
               </div>
 
+              {/* Subject */}
               <div className="form-group">
                 <label>Subject</label>
 
@@ -145,6 +148,7 @@ function UploadNotes() {
                 </div>
               </div>
 
+              {/* Semester */}
               <div className="form-group">
                 <label>Semester</label>
 
@@ -167,6 +171,7 @@ function UploadNotes() {
                 </div>
               </div>
 
+              {/* Description */}
               <div className="form-group full-width">
                 <label>Description</label>
 
@@ -215,12 +220,16 @@ function UploadNotes() {
 
                   <div className="file-info">
                     <strong>{file.name}</strong>
+
                     <span>
                       {(file.size / (1024 * 1024)).toFixed(2)} MB
                     </span>
                   </div>
 
-                  <CheckCircle2 className="file-success" size={21} />
+                  <CheckCircle2
+                    className="file-success"
+                    size={21}
+                  />
 
                   <button
                     type="button"
@@ -233,12 +242,16 @@ function UploadNotes() {
               )}
             </div>
 
+            {/* Actions */}
             <div className="upload-actions">
               <button type="button" className="cancel-btn">
                 Cancel
               </button>
 
-              <button type="button" className="submit-upload-btn">
+              <button
+                type="button"
+                className="submit-upload-btn"
+              >
                 <Upload size={18} />
                 Upload Notes
               </button>
@@ -256,8 +269,13 @@ function UploadNotes() {
 
               <ul>
                 <li>Upload only educational study material.</li>
-                <li>Make sure the PDF is clear and readable.</li>
-                <li>Do not upload copyrighted material without permission.</li>
+                <li>
+                  Make sure the PDF is clear and readable.
+                </li>
+                <li>
+                  Do not upload copyrighted material without
+                  permission.
+                </li>
                 <li>Use an accurate title and subject.</li>
               </ul>
             </div>
