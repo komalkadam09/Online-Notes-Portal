@@ -95,7 +95,7 @@ function MyUploads() {
             <span>Upload Notes</span>
           </Link>
 
-          <Link to="/dashboard" className="nav-item">
+          <Link to="/my-bookmarks" className="nav-item">
             <Bookmark size={19} />
             <span>My Bookmarks</span>
           </Link>
@@ -107,7 +107,7 @@ function MyUploads() {
 
           <p className="nav-label account-label">ACCOUNT</p>
 
-          <Link to="/dashboard" className="nav-item">
+          <Link to="/profile" className="nav-item">
             <User size={19} />
             <span>Profile</span>
           </Link>

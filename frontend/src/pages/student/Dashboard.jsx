@@ -11,7 +11,9 @@ import {
   Code2,
   Database,
   Brain,
+  User,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import "./Dashboard.css";
 
 function Dashboard() {
@@ -66,35 +68,43 @@ function Dashboard() {
         <nav className="dashboard-nav">
           <p className="nav-label">MENU</p>
 
-          <a href="#" className="nav-item active">
+          <Link to="/dashboard" className="nav-item active">
             <LayoutDashboard size={18} />
             Dashboard
-          </a>
+          </Link>
 
-          <a href="#" className="nav-item">
+          <Link to="/browse-notes" className="nav-item">
             <Search size={18} />
             Browse Notes
-          </a>
+          </Link>
 
-          <a href="#" className="nav-item">
+          <Link to="/upload-notes" className="nav-item">
             <Upload size={18} />
             Upload Notes
-          </a>
+          </Link>
 
-          <a href="#" className="nav-item">
+          <Link to="/my-bookmarks" className="nav-item">
             <Bookmark size={18} />
             My Bookmarks
-          </a>
+          </Link>
 
-          <a href="#" className="nav-item">
+          <Link to="/my-uploads" className="nav-item">
             <Clock3 size={18} />
             My Uploads
-          </a>
+          </Link>
+
+          <p className="nav-label account-label">ACCOUNT</p>
+
+          <Link to="/profile" className="nav-item">
+            <User size={18} />
+            Profile
+          </Link>
         </nav>
 
         <div className="sidebar-bottom">
           <div className="sidebar-profile">
             <div className="profile-avatar">K</div>
+
             <div>
               <strong>Komal Kadam</strong>
               <span>Student</span>
@@ -107,22 +117,27 @@ function Dashboard() {
       <main className="dashboard-main">
         <header className="dashboard-header">
           <div>
-            <p className="dashboard-greeting">Good evening, Komal 👋</p>
+            <p className="dashboard-greeting">
+              Good morning, Komal
+            </p>
+
             <h1>Welcome back!</h1>
+
             <p className="dashboard-subtitle">
               Find your study materials and continue learning.
             </p>
           </div>
 
-          <button className="header-upload-btn">
+          <Link to="/upload-notes" className="header-upload-btn">
             <Upload size={17} />
             Upload Notes
-          </button>
+          </Link>
         </header>
 
         {/* Search */}
         <section className="dashboard-search">
           <Search size={20} />
+
           <input
             type="text"
             placeholder="Search notes, subjects, topics..."
@@ -135,6 +150,7 @@ function Dashboard() {
             <div className="stat-icon blue">
               <FileText size={19} />
             </div>
+
             <div>
               <span>Total Notes</span>
               <strong>128</strong>
@@ -145,6 +161,7 @@ function Dashboard() {
             <div className="stat-icon green">
               <Download size={19} />
             </div>
+
             <div>
               <span>Downloads</span>
               <strong>342</strong>
@@ -155,6 +172,7 @@ function Dashboard() {
             <div className="stat-icon purple">
               <Bookmark size={19} />
             </div>
+
             <div>
               <span>Bookmarks</span>
               <strong>16</strong>
@@ -170,10 +188,10 @@ function Dashboard() {
               <p>Browse notes by your favourite subjects.</p>
             </div>
 
-            <button>
+            <Link to="/browse-notes" className="section-view-btn">
               View all
               <ChevronRight size={16} />
-            </button>
+            </Link>
           </div>
 
           <div className="subject-grid">
@@ -191,7 +209,10 @@ function Dashboard() {
                     <p>{subject.notes} notes available</p>
                   </div>
 
-                  <ChevronRight className="subject-arrow" size={18} />
+                  <ChevronRight
+                    className="subject-arrow"
+                    size={18}
+                  />
                 </div>
               );
             })}
@@ -206,10 +227,10 @@ function Dashboard() {
               <p>Fresh study material from the community.</p>
             </div>
 
-            <button>
+            <Link to="/browse-notes" className="section-view-btn">
               View all
               <ChevronRight size={16} />
-            </button>
+            </Link>
           </div>
 
           <div className="notes-list">
@@ -221,6 +242,7 @@ function Dashboard() {
 
                 <div className="note-info">
                   <h3>{note.title}</h3>
+
                   <p>
                     {note.subject} · {note.type}
                   </p>
@@ -231,10 +253,13 @@ function Dashboard() {
                   {note.downloads}
                 </div>
 
-                <button className="note-view-btn">
+                <Link
+                  to="/note-details"
+                  className="note-view-btn"
+                >
                   View
                   <ChevronRight size={15} />
-                </button>
+                </Link>
               </div>
             ))}
           </div>

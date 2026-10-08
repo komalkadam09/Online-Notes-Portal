@@ -7,6 +7,7 @@ import NoteDetails from "./pages/student/NoteDetails";
 import UploadNotes from "./pages/student/UploadNotes";
 import MyUploads from "./pages/student/MyUploads";
 import Profile from "./pages/student/Profile";
+import MyBookmarks from "./pages/student/MyBookmarks";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/upload-notes" element={<UploadNotes />} />
         <Route path="/my-uploads" element={<MyUploads />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/my-bookmarks" element={<MyBookmarks />} />
       </Routes>
     </BrowserRouter>
   );

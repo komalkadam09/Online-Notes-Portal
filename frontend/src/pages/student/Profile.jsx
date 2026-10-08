@@ -50,7 +50,7 @@ function Profile() {
             <span>Upload Notes</span>
           </Link>
 
-          <Link to="/dashboard" className="nav-item">
+          <Link to="/my-bookmarks" className="nav-item">
             <Bookmark size={19} />
             <span>My Bookmarks</span>
           </Link>
@@ -92,6 +92,7 @@ function Profile() {
         <section className="profile-overview">
           <div className="profile-avatar">
             <span>K</span>
+
             <button className="camera-btn">
               <Camera size={15} />
             </button>
@@ -100,6 +101,7 @@ function Profile() {
           <div className="profile-basic-info">
             <h2>Komal Kadam</h2>
             <p>Artificial Intelligence & Data Science</p>
+
             <span className="student-badge">
               <CheckCircle2 size={13} />
               Student Account
@@ -112,7 +114,9 @@ function Profile() {
           </button>
         </section>
 
+        {/* Profile Information */}
         <div className="profile-grid">
+
           {/* Personal Information */}
           <section className="profile-card">
             <div className="card-title">
@@ -123,8 +127,10 @@ function Profile() {
             </div>
 
             <div className="info-grid">
+
               <div className="info-item">
                 <span className="info-label">Full Name</span>
+
                 <div className="info-value">
                   <User size={17} />
                   <span>Komal Kadam</span>
@@ -133,11 +139,13 @@ function Profile() {
 
               <div className="info-item">
                 <span className="info-label">Email Address</span>
+
                 <div className="info-value">
                   <Mail size={17} />
                   <span>komal@example.com</span>
                 </div>
               </div>
+
             </div>
           </section>
 
@@ -151,8 +159,10 @@ function Profile() {
             </div>
 
             <div className="info-grid">
+
               <div className="info-item">
                 <span className="info-label">Course</span>
+
                 <div className="info-value">
                   <GraduationCap size={17} />
                   <span>B.Tech</span>
@@ -161,6 +171,7 @@ function Profile() {
 
               <div className="info-item">
                 <span className="info-label">Branch</span>
+
                 <div className="info-value">
                   <BookOpen size={17} />
                   <span>AI & Data Science</span>
@@ -169,6 +180,7 @@ function Profile() {
 
               <div className="info-item">
                 <span className="info-label">College</span>
+
                 <div className="info-value">
                   <Building2 size={17} />
                   <span>KBT College of Engineering</span>
@@ -177,13 +189,16 @@ function Profile() {
 
               <div className="info-item">
                 <span className="info-label">Current Semester</span>
+
                 <div className="info-value">
                   <CalendarDays size={17} />
                   <span>Semester 5</span>
                 </div>
               </div>
+
             </div>
           </section>
+
         </div>
 
         {/* Activity */}
@@ -196,10 +211,12 @@ function Profile() {
           </div>
 
           <div className="activity-grid">
+
             <div className="activity-item">
               <div className="activity-icon blue">
                 <FileText size={19} />
               </div>
+
               <div>
                 <strong>4</strong>
                 <span>Notes Uploaded</span>
@@ -210,6 +227,7 @@ function Profile() {
               <div className="activity-icon green">
                 <CheckCircle2 size={19} />
               </div>
+
               <div>
                 <strong>2</strong>
                 <span>Approved Notes</span>
@@ -220,13 +238,16 @@ function Profile() {
               <div className="activity-icon purple">
                 <Download size={19} />
               </div>
+
               <div>
                 <strong>251</strong>
                 <span>Total Downloads</span>
               </div>
             </div>
+
           </div>
         </section>
+
       </main>
     </div>
   );
