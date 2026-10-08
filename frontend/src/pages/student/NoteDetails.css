@@ -1,0 +1,479 @@
+/* =========================================
+   StudySphere — Note Details
+   ========================================= */
+
+.note-details-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f8fafc;
+}
+
+/* ================================
+   SIDEBAR
+   ================================ */
+
+.details-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 18px;
+  border-right: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.details-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  color: #0f172a;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.details-logo svg {
+  color: #2563eb;
+}
+
+.details-nav {
+  margin-top: 42px;
+}
+
+.details-nav p {
+  padding: 0 12px;
+  margin-bottom: 12px;
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.details-nav a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  margin-bottom: 5px;
+  border-radius: 9px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.details-nav a:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.details-nav a.active {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.details-profile {
+  margin-top: auto;
+  padding: 18px 10px 8px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.details-avatar {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.details-profile div:last-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.details-profile strong {
+  overflow: hidden;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.details-profile span {
+  margin-top: 2px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* ================================
+   MAIN
+   ================================ */
+
+.details-main {
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  padding: 42px 48px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #2563eb;
+}
+
+/* ================================
+   DETAILS LAYOUT
+   ================================ */
+
+.details-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.75fr);
+  gap: 22px;
+  margin-top: 25px;
+}
+
+/* ================================
+   INFORMATION PANEL
+   ================================ */
+
+.note-info-panel {
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.details-file-icon {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.details-subject {
+  display: inline-flex;
+  margin-top: 25px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.note-info-panel h1 {
+  max-width: 700px;
+  margin-top: 12px;
+  color: #0f172a;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+.details-description {
+  max-width: 720px;
+  margin-top: 16px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ================================
+   METADATA
+   ================================ */
+
+.note-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.note-meta {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.note-meta > svg {
+  color: #94a3b8;
+}
+
+.note-meta div {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-meta span {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.note-meta strong {
+  margin-top: 2px;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ================================
+   ACTIONS
+   ================================ */
+
+.details-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.download-button {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.download-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.2);
+}
+
+.bookmark-details-button {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.bookmark-details-button:hover {
+  border-color: #bfdbfe;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+/* ================================
+   PREVIEW PANEL
+   ================================ */
+
+.note-preview-panel {
+  min-height: 450px;
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.preview-header span:first-child {
+  color: #94a3b8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.preview-header h2 {
+  margin-top: 3px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.pdf-badge {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.document-preview {
+  min-height: 350px;
+  margin-top: 20px;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.document-preview svg {
+  color: #94a3b8;
+}
+
+.document-preview h3 {
+  max-width: 250px;
+  margin-top: 18px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.document-preview p {
+  max-width: 260px;
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 1050px) {
+  .details-main {
+    padding: 36px 30px;
+  }
+
+  .details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .note-preview-panel {
+    min-height: auto;
+  }
+
+  .document-preview {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 850px) {
+  .details-sidebar {
+    width: 210px;
+  }
+
+  .details-main {
+    width: calc(100% - 210px);
+    margin-left: 210px;
+    padding: 30px 22px;
+  }
+
+  .note-info-panel h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 700px) {
+  .note-details-page {
+    display: block;
+  }
+
+  .details-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .details-nav {
+    display: flex;
+    gap: 5px;
+    margin-top: 25px;
+    overflow-x: auto;
+  }
+
+  .details-nav p {
+    display: none;
+  }
+
+  .details-nav a {
+    min-width: max-content;
+  }
+
+  .details-profile {
+    display: none;
+  }
+
+  .details-main {
+    width: 100%;
+    margin-left: 0;
+    padding: 28px 18px;
+  }
+
+  .note-info-panel {
+    padding: 22px;
+  }
+
+  .note-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .note-info-panel h1 {
+    font-size: 25px;
+  }
+
+  .details-actions {
+    flex-direction: column;
+  }
+
+  .download-button,
+  .bookmark-details-button {
+    width: 100%;
+  }
+}
