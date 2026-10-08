@@ -1,0 +1,335 @@
+/* =========================================
+   StudySphere — Register Page
+   ========================================= */
+
+   .register-page {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    background: #ffffff;
+  }
+  
+  /* ================================
+     LEFT BRANDING
+     ================================ */
+  
+  .register-brand {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+      radial-gradient(
+        circle at 85% 15%,
+        rgba(59, 130, 246, 0.18),
+        transparent 28%
+      ),
+      radial-gradient(
+        circle at 10% 85%,
+        rgba(37, 99, 235, 0.12),
+        transparent 30%
+      ),
+      #0f172a;
+    color: white;
+  }
+  
+  .register-brand::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    right: -180px;
+    bottom: -170px;
+  }
+  
+  .register-brand::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+    right: -100px;
+    bottom: -100px;
+  }
+  
+  .register-brand-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 42px 64px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+  }
+  
+  .brand-logo svg {
+    color: #60a5fa;
+  }
+  
+  .register-brand-main {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 50px 0;
+  }
+  
+  .register-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 13px;
+    border: 1px solid rgba(147, 197, 253, 0.2);
+    border-radius: 999px;
+    background: rgba(59, 130, 246, 0.1);
+    color: #bfdbfe;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .register-brand-main h1 {
+    margin-top: 26px;
+    max-width: 560px;
+    color: #ffffff;
+    font-size: clamp(42px, 4.2vw, 64px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -2.5px;
+  }
+  
+  .register-brand-main h1 span {
+    color: #60a5fa;
+  }
+  
+  .register-brand-main > p {
+    max-width: 540px;
+    margin-top: 24px;
+    color: #94a3b8;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  
+  .register-brand-footer {
+    color: #475569;
+    font-size: 12px;
+  }
+  
+  /* ================================
+     RIGHT FORM SECTION
+     ================================ */
+  
+  .register-form-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 64px;
+    background: #ffffff;
+  }
+  
+  .register-card {
+    width: 100%;
+    max-width: 430px;
+  }
+  
+  .mobile-register-logo {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    color: #0f172a;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  
+  .mobile-register-logo svg {
+    color: #2563eb;
+  }
+  
+  .register-header {
+    margin-bottom: 30px;
+  }
+  
+  .register-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  
+  .register-header p {
+    margin-top: 9px;
+    color: #64748b;
+    font-size: 14px;
+  }
+  
+  /* ================================
+     FORM
+     ================================ */
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-group label {
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  
+  .register-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .register-input-wrapper svg {
+    position: absolute;
+    left: 15px;
+    color: #94a3b8;
+    pointer-events: none;
+  }
+  
+  .register-input-wrapper input {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px 0 45px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    background: #ffffff;
+    color: #0f172a;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .register-input-wrapper input::placeholder {
+    color: #cbd5e1;
+  }
+  
+  .register-input-wrapper input:hover {
+    border-color: #cbd5e1;
+  }
+  
+  .register-input-wrapper input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .register-input-wrapper:focus-within svg {
+    color: #2563eb;
+  }
+  
+  /* ================================
+     SUBMIT BUTTON
+     ================================ */
+  
+  .register-submit {
+    width: 100%;
+    height: 50px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+  }
+  
+  .register-submit:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.2);
+  }
+  
+  .register-submit:active {
+    transform: translateY(0);
+  }
+  
+  /* ================================
+     FOOTER
+     ================================ */
+  
+  .already-account {
+    margin-top: 24px;
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+  }
+  
+  .already-account a {
+    color: #2563eb;
+    font-weight: 600;
+  }
+  
+  .already-account a:hover {
+    text-decoration: underline;
+  }
+  
+  .register-note {
+    margin-top: 20px;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: center;
+  }
+  
+  /* ================================
+     RESPONSIVE
+     ================================ */
+  
+  @media (max-width: 950px) {
+    .register-page {
+      grid-template-columns: 1fr;
+    }
+  
+    .register-brand {
+      display: none;
+    }
+  
+    .register-form-section {
+      min-height: 100vh;
+      padding: 40px 24px;
+    }
+  
+    .mobile-register-logo {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .register-form-section {
+      padding: 28px 20px;
+    }
+  
+    .register-header h2 {
+      font-size: 28px;
+    }
+  
+    .mobile-register-logo {
+      margin-bottom: 36px;
+    }
+  }
